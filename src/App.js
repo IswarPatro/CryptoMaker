@@ -1,9 +1,11 @@
 import { makeStyles } from '@material-ui/core';
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
+import { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Alert from './components/Alert';
+
 
 const Homepages=lazy(()=>import('./Pages/Homepages'));
 const CoinPage=lazy(()=>import('./Pages/CoinPage'));

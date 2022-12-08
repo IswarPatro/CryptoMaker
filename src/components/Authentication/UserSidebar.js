@@ -89,17 +89,6 @@ export default function UserSidebar() {
     setState({ ...state, [anchor]: open });
   };
 
-  const logOut = () => {
-    signOut(auth);
-    setAlert({
-      open: true,
-      type: "success",
-      message: "Logout Successfull !",
-    });
-
-    toggleDrawer();
-  };
-
   const removeFromWatchlist = async (coin) => {
     const coinRef = doc(db, "watchlist", user.uid);
     try {
@@ -122,6 +111,19 @@ export default function UserSidebar() {
       });
     }
   };
+
+  const logOut = () => {
+    signOut(auth);
+    setAlert({
+      open: true,
+      type: "success",
+      message: "Logout Successfull !",
+    });
+
+    toggleDrawer();
+  };
+
+ 
 
   return (
     <div>
